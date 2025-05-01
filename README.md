@@ -2,49 +2,49 @@
 
 ## Quickstart
 
-Siga os passos abaixo para clonar e configurar o projeto:
+Welcome! To clone and set up the project, follow these steps:
 
-1. Clone o repositório:
+1. Clone the repository:
     ```bash
-    git clone https://github.com/seu-usuario/foundry-fund-me.git
+    git clone https://github.com/thiagomesq/foundry-fund-me.git
     cd foundry-fund-me
     ```
 
-2. Instale as dependências do Foundry:
+2. Install Foundry dependencies:
     ```bash
     foundryup
     forge install
     ```
 
-3. Compile os contratos:
+3. Compile the contracts:
     ```bash
     forge build
     ```
 
-4. Execute os testes para garantir que tudo está funcionando:
+4. Run the tests to ensure everything is working:
     ```bash
     forge test
     ```
 
-5. (Opcional) Utilize o Makefile para automatizar tarefas:
+5. (Optional) Use the Makefile to automate tasks:
     ```bash
     make test
     make deploy
     ```
 
-## Resumo
-Projeto desenvolvido para aprofundar conhecimentos no uso do Foundry, com foco na criação de testes, utilização de scripts e aprendizado sobre Makefile.
+## Summary
+This project was developed to deepen knowledge in using Foundry, focusing on creating tests, utilizing scripts, and learning about Makefile.
 
-## Descrição
-Este projeto foi desenvolvido utilizando o framework Foundry, uma ferramenta poderosa para desenvolvimento e testes de contratos inteligentes em Solidity. Durante o processo, foram explorados os seguintes passos e ferramentas:
+## Description
+This project was built using the Foundry framework, a powerful tool for developing and testing smart contracts in Solidity. During the process, the following steps and tools were explored:
 
-- **Configuração do ambiente**: Instalação e configuração do Foundry.
-- **Criação de contratos inteligentes**: Desenvolvimento de contratos para gerenciar fundos.
-- **Testes automatizados**: Implementação de testes utilizando o Foundry para garantir a funcionalidade e segurança dos contratos.
-- **Scripts de interação**: Criação de scripts para interagir com os contratos, incluindo deploy e chamadas de funções.
-- **Makefile**: Uso do Makefile para automatizar tarefas comuns, como compilação, testes e deploy.
+- **Environment setup**: Installation and configuration of Foundry.
+- **Smart contract creation**: Development of contracts to manage funds.
+- **Automated testing**: Implementation of tests using Foundry to ensure the functionality and security of the contracts.
+- **Interaction scripts**: Creation of scripts to interact with the contracts, including deployment and function calls.
+- **Makefile**: Use of Makefile to automate common tasks such as compilation, testing, and deployment.
 
-O projeto também envolveu o uso das bibliotecas `forge-std`, `chainlink-brownie-contracts` e `foundry-devops` para facilitar o desenvolvimento e a escrita de testes.
+The project also involved the use of the `forge-std`, `chainlink-brownie-contracts`, and `foundry-devops` libraries to facilitate development and test writing.
 
-## Considerações Finais
-Nesse projeto aprofundei em como utilizar o Foundry na criação de testes e utilização mais profunda de scripts e aprendi sobre Makefile. Continuo meu aprendizado a me tornar um Engenheiro Blockchain de excelência.
+## Final Considerations
+In this project, I delved deeper into how to use Foundry for creating tests, utilizing scripts more effectively, and learning about Makefile. I continue my journey to becoming an excellent Blockchain Engineer.
