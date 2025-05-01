@@ -1,6 +1,7 @@
 # Compiler files
 cache/
 out/
+zkout/
 
 # Ignores development broadcast logs
 !/broadcast
@@ -12,3 +13,10 @@ docs/
 
 # Dotenv file
 .env
+
+# Library files
+lib/
+
+broadcast/
+
+.DS_Store
