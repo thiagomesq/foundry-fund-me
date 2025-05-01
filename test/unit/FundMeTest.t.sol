@@ -21,27 +21,15 @@ contract FundMeTest is Test {
     }
 
     function testMinimumDollarIsFive() public view {
-        assertEq(
-            fundMe.MINIMUM_USD(),
-            5e18,
-            "Minimum dollar amount should be 5e18"
-        );
+        assertEq(fundMe.MINIMUM_USD(), 5e18, "Minimum dollar amount should be 5e18");
     }
 
     function testOwnerIsMsgSender() public view {
-        assertEq(
-            fundMe.getOwner(),
-            msg.sender,
-            "Owner should be the address that deployed the contract"
-        );
+        assertEq(fundMe.getOwner(), msg.sender, "Owner should be the address that deployed the contract");
     }
 
     function testPriceFeedVersionIsAccurate() public view {
-        assertEq(
-            fundMe.getVersion(),
-            4,
-            "Price feed version should be 4"
-        );
+        assertEq(fundMe.getVersion(), 4, "Price feed version should be 4");
     }
 
     function testFundFailsWithoutEnoughEth() public {
@@ -52,13 +40,11 @@ contract FundMeTest is Test {
     function testFundUpdatesAmountFundedDataStructure() public {
         vm.prank(USER);
         fundMe.fund{value: SEND_VALUE}();
-        uint256 amountFunded = fundMe.getAddressToAmountFunded(
-            USER
-        );
+        uint256 amountFunded = fundMe.getAddressToAmountFunded(USER);
         assertEq(amountFunded, SEND_VALUE, "Amount funded should be 10e18");
     }
 
-    function testAddFunderToArrayOfFunders() public  {
+    function testAddFunderToArrayOfFunders() public {
         vm.prank(USER);
         fundMe.fund{value: SEND_VALUE}();
         address funder = fundMe.getFunder(0);
@@ -70,7 +56,7 @@ contract FundMeTest is Test {
         fundMe.fund{value: SEND_VALUE}();
         _;
     }
-    
+
     function testOnlyOwnerCanWithdraw() public funded {
         vm.expectRevert();
         vm.prank(USER);
@@ -85,7 +71,7 @@ contract FundMeTest is Test {
         // Act
         vm.prank(fundMe.getOwner());
         fundMe.withdraw();
-        
+
         // Assert
         uint256 endingOwnerBalance = fundMe.getOwner().balance;
         uint256 endingFundMeBalance = address(fundMe).balance;

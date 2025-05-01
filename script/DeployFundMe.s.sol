@@ -8,7 +8,6 @@ import {HelperConfig} from "./HelperConfig.s.sol";
 
 contract DeployFundMe is Script {
     function run() external returns (FundMe) {
-
         HelperConfig helperConfig = new HelperConfig();
         address priceFeed = helperConfig.activeNetworkConfig();
 
@@ -17,4 +16,4 @@ contract DeployFundMe is Script {
         vm.stopBroadcast();
         return fundMe;
     }
-}// forge script script/DeployFundMe.s.sol
+}
